@@ -5,7 +5,7 @@ import java.util.LinkedList;
 /**
  *
  * @author Franco
- * O(n) solution
+ * O(nlogn) solution
  * this problem quite confused
  */
 public class LeastSubSeq {
