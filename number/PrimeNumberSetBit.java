@@ -16,6 +16,7 @@ public class PrimeNumberSetBit {
     }
 
     public int countPrimeSetBits(int L, int R) {
+        isPrime[1] = !isPrime[1];
         for(int i = 2; i <= 32; i++) {
             if(!isPrime[i]) {
                 for(int j = 2; j * i <= 32; j++)

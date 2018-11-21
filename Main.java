@@ -1,8 +1,8 @@
 package leetcode;
 
 import leetcode.number.PrimeNumberSetBit;
-import leetcode.sequence.SumSubSeqWidth;
-import leetcode.string.PalindromeNum;
+        import leetcode.sequence.SumSubSeqWidth;
+        import leetcode.string.PalindromeNum;
 
 public class Main {
 
