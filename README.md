@@ -5,8 +5,11 @@
 ### Creator : 
 Randomly number creator(todo)
 ### List : 
-FindKNum : Merge Sort, FindKNumHeap : Min-Heap.
-ListNode : Data Structure, ListSort : List Merge Sort, MergeKLists : MergeTwoLists.
+FindKNum : Merge Sort
+FindKNumHeap : Min-Heap.
+ListNode : Data Structure
+ListSort : List Merge Sort
+MergeKLists : MergeTwoLists.
 ### Sequence :
 LeastSubSeq : Monotonic queue of the distance from start point.
 SumSubSeqWidth : O(n^2) use the sets and sorted queue.
