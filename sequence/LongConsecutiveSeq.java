@@ -2,6 +2,10 @@ package leetcode.sequence;
 
 import java.util.HashSet;
 
+/**
+ *
+ * @author Franco
+ */
 public class LongConsecutiveSeq {
 
     private int ans = 1;
