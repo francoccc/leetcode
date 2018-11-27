@@ -1,32 +1,28 @@
 package leetcode;
 
-import leetcode.tree.TreeNode;
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class Solution {
 
-    private boolean cancel = false;
-    private boolean end = true;
-    private TreeNode ans;
-    private int md = Integer.MAX_VALUE;
-
-    private void deepthSearch(TreeNode t, TreeNode p, TreeNode q, int d) {
-        if(cancel) return;
-        if(null != t.left) deepthSearch(t.left, p, q, d + 1);
-        if((t == p || t == q) && (end = !end)) {
-            cancel = true;
-        }
-        if(!end || cancel) {
-            if(d < md) {
-                md = d;
-                ans = t;
+    public List<Integer> getRow(int rowIndex) {
+        int[] olds = new int[]{1};
+        int[] news;
+        while(rowIndex > 0) {
+            news = new int[olds.length + 1];
+            news[0] = 1;
+            news[news.length - 1] = 1;
+            for(int i = 1; i < news.length - 2; i++) {
+                news[i] = olds[i] + olds[i - 1];
             }
+            olds = news;
+            rowIndex--;
         }
-        if(null != t.right) deepthSearch(t.right, p, q, d + 1);
-    }
-
-    public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
-        deepthSearch(root, p, q, 0);
-        return ans;
+        List<Integer> list = new ArrayList<>();
+        for(int i = 0; i < olds.length; i++) {
+            list.add(olds[i]);
+        }
+        return list;
     }
 }
