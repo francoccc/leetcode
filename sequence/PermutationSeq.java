@@ -3,6 +3,10 @@ package leetcode.sequence;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ *
+ * @author Franco
+ */
 public class PermutationSeq {
 
     List<Integer> nums = new ArrayList<>();
