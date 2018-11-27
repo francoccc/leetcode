@@ -1,5 +1,9 @@
 package leetcode.dp;
 
+/**
+ *
+ * @author Franco
+ */
 public class HouseRobber {
 
     private int ans = 0;
