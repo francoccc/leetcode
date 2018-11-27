@@ -28,10 +28,11 @@ public class Bricks {
         int bricksLeft = uf.rank[uf.find(0)];
 
         for(int i = hits.length - 1; i >= 0; i--) {
+            if( grid[hits[i][0]][hits[i][1]] != 2) continue;
             grid[hits[i][0]][hits[i][1]] = 1;
             unionAround(grid, hits[i][0], hits[i][1]);
             int curBricksLeft = uf.rank[uf.find(0)];
-            bricks[i] = curBricksLeft - bricksLeft - 1;
+            if(curBricksLeft != bricksLeft) bricks[i] = curBricksLeft - bricksLeft - 1;
             bricksLeft = curBricksLeft;
         }
         return bricks;
