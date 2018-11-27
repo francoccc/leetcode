@@ -1,4 +1,4 @@
-package leetcode.divide;
+package leetcode.binarysearch;
 
 /**
  *
